@@ -1,0 +1,26 @@
+<div class="row">
+<div class="col">
+  <h2>Property Details</h2>
+  <br>
+  <h4 style="color:orange">{{property.title}}</h4>
+  <br>
+  <h6 style="color: blue">Property Details</h6>
+  <p>{{property.description}}</p>
+</div>
+<div class="col">
+  <br>
+  <h2 style="color: red">Price</h2>
+  <h4 style="color:green">Rs {{property.price}}</h4>
+  <button (click)="showForm=!showForm" class="btn">Enquire for this Property</button>
+  <ng-container *ngIf="showForm">
+    <form (ngSubmit)="sendEnquiry(enquiryForm)" #enquiryForm="ngForm">
+      <div class="form-group">
+        <label>Message</label>
+        <input ngModel name="message" type="text" class="form-control" placeholder="Enter Message">
+      </div>
+      <button type="submit">Send Enquiry</button>
+    </form>
+</ng-container>
+  
+</div>
+</div>

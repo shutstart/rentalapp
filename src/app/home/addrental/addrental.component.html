@@ -1,0 +1,38 @@
+
+<div class="container" >
+  <div class="modal-dialog text-center">
+      <div class="col-12 user-img">
+          <h2>Add Your Property for Rent</h2>
+        </div>
+      
+    <div class="col-xs-12 main-section">
+      <div class="modal-content">
+        <br><br>
+        <form (ngSubmit)="addProperty(addRentalForm)" #addRentalForm="ngForm" class="from-inline">
+          <div class="form-group">
+            <input name="title" ngModel type="text" class="form-control" placeholder="Enter Title" required>
+            <small id="emailHelp" class="form-text text-muted">You Must Enter the Title less then 100 letters</small>
+          </div>
+          <div class="form-group">
+            <input name="price" ngModel type="number" class="form-control" placeholder="Enter Price" required>
+            <small id="emailHelp" class="form-text text-muted">Enter the price in rupees (5000.00)</small>
+          </div>
+          <div class="form-group">
+            <input name="locality" ngModel type="text" class="form-control" placeholder="Enter Locality" required>
+            <small id="emailHelp" class="form-text text-muted">You Must Enter the Title less then 100 letters</small>
+          </div>
+          <div class="form-group">
+            <input name="description" ngModel type="text" class="form-control" placeholder="Description" required>
+            <small id="emailHelp" class="form-text text-muted">Enter the Description of the property</small>
+          </div>
+          <div class="container">
+              <app-file-upload></app-file-upload>
+              </div>
+          <button type="submit" [disabled]="!addRentalForm.valid" class="btn">Submit</button>
+        </form>
+      
+      </div>
+      <!--End of modal Content-->
+    </div>
+    </div>
+</div>

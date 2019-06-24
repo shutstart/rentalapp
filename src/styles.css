@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+html, body{
+    height:100%;
+    width: 100%
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background: url('./assets/mountain.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+.btn{
+    background-color: #27c2a5!important;
+    color: #fff;
+    font-size: 19px;
+    padding: 7px 14px;
+    border-radius: 5px;
+    border-bottom: 4px solid #219882; 
+}
+.btn:hover, .btn:focus{
+    background-color: #25a890!important;
+    border-bottom: 4px solid #25a890!important;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button,
+input[type=date]::-webkit-inner-spin-button, 
+input[type=date]::-webkit-outer-spin-button{ 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+

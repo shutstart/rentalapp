@@ -1,0 +1,9 @@
+.card{
+    width: 18rem;
+    background:#3b4652!important; 
+    opacity: .95; 
+    color:#fff;
+    -webkit-box-shadow: 12px 12px 21px -10px rgba(0,0,0,0.75);
+-moz-box-shadow: 12px 12px 21px -10px rgba(0,0,0,0.75);
+box-shadow: 12px 12px 21px -10px rgba(0,0,0,0.75);
+}

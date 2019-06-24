@@ -1,0 +1,29 @@
+<div class="dropzone" 
+dropZone 
+(hovered)="toggleHover($event)"
+(dropped)="startUpload($event)"
+[class.hovering]="isHovering">
+<h3>Upload The image of the property</h3>
+<p>Drag and drop a file here</p>
+<div class="file">
+  <label class="file-label">
+    <input type="file" (change)="startUpload($event.target.files)">
+    <span class="file-cta">
+      <span class="file-icon">
+        <i class="fa fa-upload">
+        </i>
+      </span>
+    </span>
+</label>
+</div>
+</div>
+<div *ngIf="percentage | async as pct">
+  <progress [value]="pct" max="100"></progress>
+</div>
+
+<div *ngIf="(snapshot | async) as snap" >
+  {{ snap.bytesTransferred | fileSize }} of {{ snap.totalBytes | fileSize }}
+<button (click)= "task.pause()" [disabled]="!isActive(snap)">Pause</button>
+<button (click)= "task.cancel()" [disabled]="!isActive(snap)">Cancel</button>
+<button (click)= "task.resume()" [disabled]="!(snap?.state === 'paused')" >Resume</button>
+</div>

@@ -1,0 +1,93 @@
+.h3{
+    color: #25a890;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.main-section{
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 0;
+}
+.modal-content{
+    background-color: #3b4652;
+    opacity: .95;
+    padding: 0 18px;
+    -webkit-box-shadow: 12px 12px 6px -6px rgba(0,0,0,0.75);
+-moz-box-shadow: 12px 12px 6px -6px rgba(0,0,0,0.75);
+box-shadow: 12px 12px 6px -6px rgba(0,0,0,0.75);
+}
+.user-img{
+    width: 450px;
+    margin-left: 20px;
+    margin-top: 0px;
+    margin-bottom: -10.5px;
+    background: #25a890;
+    
+}
+.user-img h2{
+    color: #fff;
+    
+ }
+.form-group{
+    margin-bottom: 25px;
+}
+.form-group input{
+    height:42px;
+    border-radius: 5px;
+    border: 0;
+    font-size: 18px;
+    padding-left: 54px;
+}
+.form-group::before{
+    font-family: 'Font Awesome\ 5 Free';
+    content: "\f007";
+    position: absolute;
+    font-size: 22px;
+    color: #555e60;
+    left: 28px;
+    padding-top: 4px;
+}
+
+.form-group:nth-of-type(2)::before{
+    content: "\f156";
+}
+.form-group:nth-of-type(3)::before{
+    content: "\f015";
+}
+.form-group:nth-of-type(4)::before{
+    content: "\f15c";
+}
+.form-group:nth-of-type(6)::before{
+    content: "\f10b";
+}
+button{
+    width: 40%;
+    margin: 5px 0 25px;
+}
+
+.svg-inline--fa{
+    font-size: 20px;
+    margin-right: 7px;
+}
+.forgot{
+    padding: 5px 0 25px;
+}
+.forgot a{
+    color: #c2fbfe;
+}
+.other{
+    padding: 5px 0 25px;
+    color: #c2fbfe;
+    
+}
+.other a{
+    color: #25a890;
+}
+.form-control::-webkit-calendar-picker-indicator{
+    display: none;
+    -webkit-appearance: none;
+}
+small{
+    color: #c2fbfe !important;
+    opacity: .65 !important;
+}

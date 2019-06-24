@@ -1,0 +1,22 @@
+<div class="modal-dialog text-center">
+<div class="col-sm-8 main-section">
+  <div class="modal-content">
+    <div class="col-12 user-img">
+      <img src="../../../assets/face.png">
+    </div>
+<form (ngSubmit)="signin(signinForm)" #signinForm="ngForm" class="col-12">
+  <div class="form-group">
+      <input name="email" ngModel type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus="">
+  </div>
+<div class="form-group"> 
+  <input name="password" ngModel type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+</div>
+
+  <button [disabled]="!signinForm.valid" class="btn" type="submit"><i class="fas fa-sign-in-alt"></i>Login</button>
+  <br>
+  <div class="col-12 other">Don't have an account? <a routerLink="/auth/signup">Sign Up</a></div>
+</form>
+  </div><!--End of modal Content-->
+</div>
+</div>
+

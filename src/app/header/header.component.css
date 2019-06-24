@@ -1,0 +1,13 @@
+.navbar{
+    background-color: #3b4652 !important;
+    opacity: .75;
+    color: #fff;
+}
+.nav-item a{
+    color: #fff;
+}
+.nav-item a:hover{
+    background: #fff;
+    opacity:.85;
+    transition: 0.5s;
+}

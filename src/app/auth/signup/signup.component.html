@@ -1,0 +1,30 @@
+<div class="modal-dialog text-center">
+    <div class="col-sm-8 main-section">
+      <div class="modal-content">
+        
+<form (ngSubmit)="signup(signupForm)" #signupForm="ngForm" class="form-signin">
+  <h1 class="h3">Please Sign Up</h1>
+  <div class="form-group">
+    <input name="name" ngModel type="text" class="form-control" placeholder="Enter Your Name" required>
+  </div>
+  <div class="form-group">
+      <input name="email" ngModel type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus="">
+  </div>
+  <div class="form-group"> 
+      <input name="password" ngModel type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+    </div>
+  <div class="form-group">
+    <input class="form-control" placeholder="Date of birth (yyyy-mm-dd)" type="date" name="dob" ngModel id="inputdob" ngModel ngbDatepicker #d="ngbDatepicker" (click)="d.toggle()" required>
+        
+</div>
+  <div class="form-group">
+  <input name="mobile" ngModel type="number" id="inputmob" class="form-control" placeholder="Mobile" required>
+  </div>
+  <button [disabled]="!signupForm.valid" class="btn" type="submit">Sign Up</button>
+  <div class="col-12 other">Already have an account? <a routerLink="/auth/signin">Sign In</a></div>
+</form>
+      </div>
+      <!--End of modal Content-->
+    </div>
+    </div>
+
