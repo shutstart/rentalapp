@@ -45,12 +45,12 @@ export class FileUploadComponent implements OnInit {
       tap(snap=>{
         if (snap.bytesTransferred === snap.totalBytes) {
           // Update firestore on completion
+          this.rental.url = path;
           this.db.collection('photos').add( { path, size: snap.totalBytes })
           this.toastr.success("File uploaded Successfully!")
         }
       })
     );
-   // this.downloadURL = this.task.downloadURL();
   }
 isActive(snapshot){
   return snapshot.state === 'running' && snapshot.bytesTransferred < snapshot.totalBytes; 

@@ -8,7 +8,7 @@ import { map } from 'rxjs/operators'
 
 export class RentalService {
   constructor(private db:AngularFirestore) { }
-
+  url = '';
   addRental(rental){
     let createdOn = new Date()
     return this.db.collection('rentals').add({createdOn,...rental})

@@ -27,7 +27,8 @@ export class AddrentalComponent implements OnInit {
       ownerData = data
       mobile = ownerData.mobile
       name = ownerData.name
-      this.rentalService.addRental({ownerEmail,mobile,name,...addrentalform.value}).then(data=>{
+      let image = this.rentalService.url;
+      this.rentalService.addRental({image,ownerEmail,mobile,name,...addrentalform.value}).then(data=>{
         addrentalform.reset()
         this.toastr.success("Property was added successfully!")
       }).catch(err=>{

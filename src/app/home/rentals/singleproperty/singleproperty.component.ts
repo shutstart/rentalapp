@@ -3,6 +3,7 @@ import { AuthService } from 'src/app/service/auth.service';
 import { EnquiryService } from 'src/app/service/enquiry.service';
 import { NgForm } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
+import { AngularFireStorage } from '@angular/fire/storage';
 
 @Component({
   selector: 'app-singleproperty',
@@ -12,9 +13,11 @@ import { ToastrService } from 'ngx-toastr';
 export class SinglepropertyComponent implements OnInit {
   @Input('property') property
   showForm:boolean=false  
-  constructor(public authService:AuthService,public enquiryService:EnquiryService,public toastr:ToastrService) { }
-
+  constructor(public authService:AuthService,public enquiryService:EnquiryService,public toastr:ToastrService,public storage:AngularFireStorage) { }
+  image:any
   ngOnInit() {
+    this.image = this.storage.ref(this.property.image).getDownloadURL()
+    console.log(this.image)
   }
 
   sendEnquiry(enquiryForm:NgForm){
